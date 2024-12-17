@@ -24,12 +24,19 @@ const Addcours = () => {
              Swal.fire({
                 title: "Success!",
                 text: "Your form has been submitted successfully.",
-                icon: "warning",
+                icon: "success",
                 showCloseButton: true,
                 confirmButtonText: "OK",
               })
     }).catch((err)=>{
       console.log(err)
+      Swal.fire({
+        title: "error!",
+        text: "please try again!",
+        icon: "error",
+        showCloseButton: true,
+        confirmButtonText: "OK",
+      })
     })
   }
   return (
